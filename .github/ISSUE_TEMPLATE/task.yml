@@ -1,0 +1,54 @@
+name: Task or proposal
+description: Propose a focused project change
+title: "[Task]: "
+labels:
+  - "type:maintenance"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe one cohesive project change. File unrelated defects separately.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What project problem or constraint makes this work necessary?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What should become possible or simpler?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Identify the affected behavior and important boundaries.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: Give a runnable or observable way to verify the result.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List the conditions required to close this issue.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: I searched for existing work with the same scope.
+          required: true
+        - label: This issue contains no conversation history, agent instructions, private data, or machine-local paths.
+          required: true
